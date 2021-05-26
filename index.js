@@ -4,6 +4,9 @@ const cors = require('cors');
 const { initializeDatabase } = require("./db/db.connect");
 const { errorHandler } = require("./middlewares/error-handler.middleware");
 const { routeNotFound } = require("./middlewares/route-not-found.middleware");
+const userCredentials = require('./routes/user-credentials.route');
+const { addCategoryData } = require('./models/categories.model');
+const { addQuizData } = require('./models/quizzes.model');
 const app = express();
 const PORT = 3000;
 
@@ -11,6 +14,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 initializeDatabase();
+
+// addCategoryData();
+addQuizData();
+
+app.use('/auth', userCredentials);
 
 app.get('/', (req, res) => {
   res.send('Hello Quizzel!')

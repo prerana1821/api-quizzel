@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const uri = process.env['uri'];
 const initializeDatabase = async () => {
-  console.log('Hello');
   try {
     const connection = await mongoose.connect(uri, {
       useNewUrlParser: true,

@@ -1,14 +1,12 @@
 const quizzesDB = [
   {
-    id: '1',
     quizName: "Swimming Strokes",
-    categoryId: "11",
+    categoryId: "60ae83ba668b3206bfa96186",
     level: "Easy",
     thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsbSeDQkqki12JMfNZ5BS6yCUNV4__TJxXKw&usqp=CAU",
     highScore: [
       {
-        id: "2231",
-        userId: "2222",
+        userId: "60ae7ad0c2e820033978c65f",
         score: 20
       }
     ],
@@ -73,15 +71,13 @@ const quizzesDB = [
     ],
   },
   {
-    id: v4(),
     quizName: "Championships",
-    categoryId: "12",
-    level: "Hard",
+    categoryId: "60ae83ba668b3206bfa96187",
+    level: "Difficult",
     thumbnail: "https://i.guim.co.uk/img/media/b339572204f03729bbdd7c34133b4ebfd21e27d1/0_110_5216_3129/master/5216.jpg?width=700&quality=85&auto=format&fit=max&s=ec04b357793f146b7a2c57d80abcbbac",
     highScore: [
       {
-        id: "2232",
-        userId: "2222",
+        userId: "60ae7be6ed8021038bdde132",
         score: 20
       }
     ],
@@ -149,14 +145,12 @@ const quizzesDB = [
 
 const categoriesDB = [
   {
-    id: '11',
     name: 'Strokes',
     noOfQuizzes: 1,
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP-9fmmfI8WbHzdsod7tTy__b4OE_ifPQtAg&usqp=CAU',
     description: 'string',
   },
   {
-    id: '12',
     name: 'People',
     noOfQuizzes: 1,
     thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRf1AeCZnLKKmu1bGoujfppvJufQQ0AxShcdnW5cs-960qW-e41f2Qj19bHZygbpscoTs&usqp=CAU',
