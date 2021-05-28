@@ -35,9 +35,9 @@ router.post('/login', async (req, res) => {
           }, success: true, message: "Sign Up Successful"
         });
       } else {
-        return res.status(400).json({ success: false, message: "Invalid Password. Enter correct password" });
+        return res.status(400).json({ success: false, errorMessage: "Invalid Password. Enter correct password" });
       }
-    } return res.status(401).json({ success: false, message: "User not found. Check your user credentials" })
+    } return res.status(401).json({ success: false, errorMessage: "User not found. Check your user credentials" })
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -59,10 +59,10 @@ router.post('/signup', async (req, res) => {
        const NewUserDetails = new UserDetail({
         _id: NewUser._id,
       });
-      await NewUserDetails.save();
+       await NewUserDetails.save();
       return res.status(201).json({ user: { _id: savedUser._id, token }, success: true, message: "Sign Up Successful" })
     } else {
-      return res.status(403).json({ success: false, message: "User Already Exists" })
+      return res.status(403).json({ success: false, errorMessage: "User Already Exists" })
     }
   } catch (error) {
     res.status(500).json({
